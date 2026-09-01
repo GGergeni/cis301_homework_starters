@@ -1,0 +1,27 @@
+//Homework 2
+//7_translations.txt
+
+Suppose you have the following propositional atoms:
+
+p: It is sunny tomorrow
+q: I will go hiking
+r: I carry an umbrella
+s: I am tired
+t: I eat an apple
+
+
+Express each of these propositional logic statements in English as
+succinctly as you can.
+
+
+Statement 1: p → ¬r ∧ q
+
+
+
+
+Statement 2: ¬(r ∧ t) → ¬q
+
+
+
+
+Statement 3: s → (¬p → ¬q)
