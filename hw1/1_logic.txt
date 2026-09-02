@@ -14,7 +14,7 @@ What conclusion, if any, can we draw from our premises? Explain.
 
 --> Type your conclusion below
 
-
+You have to change your password because in this case its and if p then q
 
 ////////////////////////////////////
 
@@ -29,7 +29,7 @@ What conclusion, if any, can we draw from our premises? Explain.
 
 --> Type your conclusion below
 
-
+We cant draw a conclusion on this because chipotle didnt raise prices
 
 
 ///////////////////////////////////
@@ -49,7 +49,7 @@ What can we conclude about a? Explain.
 
 --> Type your conclusion below
 
-
+We can conclude that a > 0 and is even because of the outside statement we can see that A > 0 in order for it to move on and then we can see that it would also have to be even
 
 
 
@@ -73,7 +73,7 @@ What can we conclude about a? Explain.
 --> Type your conclusion below
 
 
-
+we know that x is in fact not 20 because the if statement (a > 10 && a < 20) is false
 
 
 ///
@@ -83,3 +83,4 @@ that affect what we could conclude in Part 1 (if we still knew that y was 17 and
 just after the code fragment finishes)? Explain.
 
 --> Type your conclusion below
+yes it would affect the conclusion because we would only be able to conclude that a > 10 and not a < 20

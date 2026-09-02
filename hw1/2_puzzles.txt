@@ -14,13 +14,15 @@ Caitlin says: Exactly one of us is a knight.
 (Harry doesn't say anything.)
 
 //type your solution (knight or knave) next to each question
-What type is Gabe? 
-What type is Harry? 
-What type is Caitlin? 
+What type is Gabe? Knave
+What type is Harry? knave
+What type is Caitlin? knight
 
 //Explain your reasoning below. Why is your answer the ONLY one that works?
 
-
+gabe would be contridicting himself
+caitlin is the knight because we know there can only be one in this case and shes correct 
+harry doesnt say anything
 
 
 ////////////////////////////////////
@@ -32,12 +34,15 @@ Lewis says: Ellie would say I am a knight.
 Ellie says: Either I am a knight or Lewis is a knight, but not both of us.
 
 //type your solution (knight or knave) next to each question
-What type is Gabby? 
-What type is Lewis? 
-What type is Ellie? 
+What type is Gabby? Knight
+What type is Lewis? cant say
+What type is Ellie? cant say if shes right or wrong
 
 //Explain your reasoning below. Why is your answer the ONLY one that works?
 
+theres nothign saying gabby isnt a knight
+lewis isnt a knight or a knave because of what ellie says
+ellie cant be a knight or a knave because what she says is a contridiction 
 
 
 ///////////////////////////////////
@@ -55,3 +60,5 @@ What type is Ellie?
 
 
    --> Who stole your koi? Explain your answer.
+the theif was carl because carl claimed he didnt steal the koi but then Ferdinand said at least one of them did
+which is true and agatha said she didnt steal it and thats truth so it would have to be carl. DUN DUN DUN!
