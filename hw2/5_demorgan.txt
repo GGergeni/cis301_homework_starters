@@ -15,7 +15,7 @@ if (a != 8 && str.contains(piece) == false) {
 
 Negated condition:
 
-
+if (a == 8 || str.contains(piece) == true)
 
 
 
@@ -34,7 +34,7 @@ if (val > 45 || nums.length <= 10) {
 
 Negated condition:
 
-
+if (val <= 45 && nums.length > 10)
 
 
 
@@ -51,3 +51,4 @@ if ((score >= 80 && score <= 100) || (s.quizOut() == true && level < 5)) {
 
 
 Negated condition:
+if ((score < 80 || score > 100) && (s.quizOut() == false || level >= 5))

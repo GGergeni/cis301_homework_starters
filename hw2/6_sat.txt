@@ -10,20 +10,23 @@ that demonstrates your claim. (You do not need to complete a full truth table.)
 Sat problem 1:
 (p ∨ ¬q) ∧ (¬p ∨ q) ∧ (¬p ∨ ¬q)
 
-
-
+p = F
+q = F
+this would allow the problem to be satisfiable 
 
 Sat problem 2:
 (p → q) ∧ (q → p) ∧ (¬p → q) ∧ (q → ¬p)
 
-
+This problem is not satisfiable because there is no combination that could make it true 
 
 
 Sat problem 3:
 (p ∨ q ∨ r) ∧ (¬p ∨ ¬q ∨ r) ∧ (p ∨ ¬q ∨ ¬r) ∧ (¬p ∨ q ∨ ¬r)
 
-
+if p, q, and r are all true then the sat problem becomes satisfiable because all parts equal true
 
 
 Sat problem 4:
 (p ∨ ¬q) ∧ (p ∨ q) ∧ (¬p ∨ ¬q) ∧ (¬p ∨ q)
+this problem is unsatisfiable due to the fact that p and q in some parts have not which means for it 
+to be satisfiable they would have to be T and F at the same time so its not satisfiable.

@@ -8,7 +8,17 @@
 //When you are done, do a Logika check (Ctrl-Shift-W on Windows, Command-Shift-W on Mac).
 //You should get the message "Logika verified".
 
-
+                *
 -----------------------------
 p q r # (p & q) ->: !(r | q)
 -----------------------------
+T T T           F
+T T F           F
+T F T           T
+T F F           T
+F T T           T
+F T F           T
+F F T           T
+F F F           T
+
+Because there are T's and F's as the final answer the problem would be considered contingent.

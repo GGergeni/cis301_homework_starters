@@ -21,3 +21,13 @@
 
 //YOU DO THIS
 //PUT YOUR SECOND TRUTH TABLE HERE
+p q r # (p ∧ q) ∨ (p ∧ r)
+---------------------
+T T T     T      
+T T F     T    
+T F T     T      
+T F F     F     
+F T T     F      
+F T F     F      
+F F T     F      
+F F F     F      

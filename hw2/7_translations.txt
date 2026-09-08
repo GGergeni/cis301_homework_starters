@@ -16,12 +16,13 @@ succinctly as you can.
 
 Statement 1: p → ¬r ∧ q
 
-
+if it is sunny tommorow, I will not carry an umbrella and I will go hicking.
 
 
 Statement 2: ¬(r ∧ t) → ¬q
 
-
+If do not carry an umbrella and eat an apple, then I wont go hicking  
 
 
 Statement 3: s → (¬p → ¬q)
+if I am tired, and its not sunny then I wont go hicking.
