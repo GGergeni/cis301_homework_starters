@@ -1,5 +1,5 @@
-//4_equivA.logika
-
+//Homework 2
+//4_equivExplain.txt
 
 
 In 4_equivA.logika, 4_equivB.logika, and 4_equivExplain.txt, use truth tables to demonstrate the distributive law.
