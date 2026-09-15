@@ -22,11 +22,19 @@ Part 1 (complete steps (a) and (b)):
 
 
 a) Translations:
-
+if its cold then I will build a snowman
+if I build a snowman than its cold
 
 
 b) Valid or Invalid?
-
+this would be invalid if 
+p: F 
+q: T
+this is because 
+Premise:
+    F -> T = T
+Conclusion:
+    T -> F = F
 
 
 
@@ -39,11 +47,14 @@ Part 2 (complete steps (a) and (b)):
 
 
 a) Translations:
-
-
-
+Premises:
+    If it is could or i build a snowman then it snows
+    I do not build a snowman
+    It does not snow
+Conclusion: 
+    It is not cold
 b) Valid or Invalid?
-
+Valid because the premise and conclusion will always match 
 
 
 
@@ -56,7 +67,16 @@ Part 3 (complete steps (a) and (b)):
 
 
 a) Translations:
+I both do not build a snowman and go sledding
+if its cold then i will go sledding
+if it snows then I build a snowman
 
+its not snowing and im not going sledding
 
 
 b) Valid or Invalid?
+p: T
+q: F
+r: F
+s: T
+this would make this not valid.

@@ -10,3 +10,15 @@ are NOT logically equivalent.
 
 Afterward, explain why you have shown that the two statements are not equivalent.
 What would you expect to happen differently if both statements were equivalent?
+p, q, r # p ∧ q → r # (p → r) ∧ (q → r)
+T  T  T         T             T
+T  T  F         F             F
+T  F  T         T             T
+T  F  F         T             F
+F  T  T         T             T
+F  T  F         T             F
+F  F  T         T             T 
+F  F  F         T             T
+the reason that both statements are not equivalent is because they would have to have the same truth
+tables and since they dont they are not equivalent. if they were equivalent they would have the same 
+identical truth table.

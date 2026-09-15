@@ -18,7 +18,22 @@ import org.sireum.justification.natded.prop._
     ((p & q) | (q & r)) |- (q & (r | p))
       Proof(
         //WRITE THE PROOF HERE
-        
+        1 ((p & q) | (q & r)) by Premise,
+        2 SubProof (
+          3 Assume (p & q),
+          4 (q) by AndE2(3),
+          5 (p) by AndE1(3),
+          6 (r | p) by OrI2(5),
+          7 (q & (r | p)) by AndI(4, 6),
+        ),
+        8 SubProof (
+          9 Assume(q & r),
+          10 (q) by AndE1(9),
+          11 (r) by AndE2(9),
+          12 (r | p) by OrI1(11),
+          13 (q & (r | p)) by AndI(10, 12),
+        ),
+        14 (q & (r | p)) by OrE(1, 2, 8),
     )
     //@formatter:on
   )
