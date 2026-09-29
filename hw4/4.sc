@@ -17,7 +17,25 @@ import org.sireum.justification.natded.prop._
     ( !(p | q) ) |-  ( !p & !q)
       Proof(
         //COMPLETE PROOF HERE
+        1 (!(p | q)) by Premise,
 
+        //derive !p
+        2 SubProof(
+          3 Assume(p),
+          4 (p | q) by OrI1(3),
+          5 (F) by NegE(4,1),
+        ),
+        6 (!p) by NegI(2),
+
+        //derive !p
+        7 SubProof(
+          8 Assume (q),
+          9 (p | q)by OrI2(8),
+          10 (F) by NegE(9, 1),
+        ),
+        11(!q) by NegI(7),
+
+        12 (!p & !q) by AndI(6,11)
       )
   )
 }

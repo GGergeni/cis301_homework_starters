@@ -17,7 +17,30 @@ import org.sireum.justification.natded.prop._
     ( p __>: a | b, a __>: d, q __>: !b, p & q ) |-  ( d )
       Proof(
         //COMPLETE PROOF HERE
+        1 (p __>: a | b) by Premise,
+        2 (a __>: d) by Premise,
+        3 (q __>: !b) by Premise,
+        4 (p & q ) by Premise,
 
+        5 (p) by AndE1(4),
+        6 (q) by AndE2(4),
+        7(a | b) by ImplyE(1, 5),
+        8(!b) by ImplyE(3, 6),
+
+        //case a
+        9 SubProof(
+          10 Assume (a),
+          11 (d) by ImplyE(2, 10),
+        ),
+
+        //case b
+        12 SubProof(
+          13 Assume (b),
+          14 (F) by NegE(13, 8),
+          15 (d) by BottomE(14),
+        ),
+
+        16 (d) by OrE(7, 9, 12)
       )
   )
 }
