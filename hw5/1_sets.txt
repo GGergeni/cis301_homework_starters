@@ -15,12 +15,12 @@ Here is a list of symbols that might be useful for pasting into problems:
 
 1. Use set builder notation to describe the following sets:
     a) {-24,-16,-8,0,8,16,24,32}
-
+    {8k : k ∈ ℤ, -3<=k<=4 }
 
 
 
     b) {11,14,17,20,23}
-
+    {3k + 2:k ∈ ℤ, 3 <=k<=7}
 
 
 
@@ -30,22 +30,22 @@ Here is a list of symbols that might be useful for pasting into problems:
 2. Suppose we have two sets:  A = {-8,-2,0,1,4,17,25,37} and B = {-5,-2,1,2,5,8,17,22,37,40,44}
 
     a) A ⋂ B = ?
-
+    {-2,1,17,37}
 
 
 
     b) A ⋃ B = ?
-
+    {-8,-2,0,1,2,4,5,8,17,22,25,37,40,44}
 
 
 
     c) A - B = ?
-
+    {-8,0,4,25}
 
 
 
     d) B - A = ?
-
+    {-5,2,5,8,22,40,44}
 
 
 
@@ -55,22 +55,24 @@ Here is a list of symbols that might be useful for pasting into problems:
     list of elements):
 
     a) {x : x ∈ Z, |4x| < 25}
-
+        abs(4x) < 25 means |x| < 6.25 so the ins are {-6,-5,-4,-3,-2,-1,0,1,2,3,4,5,6}
 
 
 
     b) {x : x = 2k, k ∈ ℕ, k ≤ 9} ⋂ {x : x = n^2, n ∈ ℤ, -4 ≤ n ≤ 4}
-
+    the first set is {2,4,6,8,10,12,14,16,18}
+    second set is {0,1,4,9,16}
+    the intersection is at {4,16}
 
 
 
     c) {x : x = 2k, k ∈ ℕ, k ≤ 9} ⋃ {x : x = n^2, n ∈ ℤ, -4 ≤ n ≤ 4}
-
+    the union is {0,1,2,4,6,8,9,10,12,14,16,18}
 
 
 
     d) {x : x is an odd-numbered month with 31 days}
-
+    {january,march,may,july}
 
 
 
@@ -80,7 +82,7 @@ Here is a list of symbols that might be useful for pasting into problems:
 4. Using the simplest notation possible, describe the elements in the set:
 
     {x : x ∈ ℤ, x ≥ -5} ∪ {x : x ∈ ℤ, x ≤ 7}
-
+    every int is either >=-5 or <= 7 meaning the answer is ℤ
 
 
 
@@ -90,7 +92,7 @@ Here is a list of symbols that might be useful for pasting into problems:
 ///
 
 5. Suppose A ⋃ B = A for two sets A and B. What does that tell us about A and B? Explain.
-
+if A ⋃ B then A ⊆ B the union has every element of B so if the union equals A every element in B must also be in a
 
 
 
@@ -100,7 +102,7 @@ Here is a list of symbols that might be useful for pasting into problems:
 ///
 
 6. Suppose A ⋂ B = A for two sets A and B. What does that tell us about A and B? Explain.
-
+if A ⋂ B then A ⊆ B the intersection has only elements that are in both sets. if it equals all of A then every element of A has to be in B
 
 
 
@@ -111,7 +113,7 @@ Here is a list of symbols that might be useful for pasting into problems:
 7. Suppose A, B, and C are sets.
     a) If A ⋃ C = B ⋃ C, must A = B? Either provide a counterexample (with specific sets
         for A, B, and C) or explain why this must be true.
-
+    no: A = {1}, B ={2}, C = {1,2} then A ⋃ C = {1,2} = B ⋃ C but A != B
 
 
 
@@ -120,4 +122,4 @@ Here is a list of symbols that might be useful for pasting into problems:
 
     b) If A ⋂ C = B ⋂ C, must A = B? Either provide a counterexample (with specific sets
         for A, B, and C) or explain why this must be true.
-
+    No: A = {1}, B ={2}, C = {3} then A ⋂ C = ∅ = B ⋂ C but again A != b
