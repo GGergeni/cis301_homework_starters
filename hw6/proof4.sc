@@ -10,7 +10,7 @@ import org.sireum.justification.natded.prop._
 //Your file should say "Logika verified".
 
 
-//∃ x (candy(x) → sweet(x)), candy(Reeses) ⊢ ∃ x sweet(x)
+//∀ x (candy(x) → sweet(x)), candy(Reeses) ⊢ ∃ x sweet(x)
 
 @pure def proof4[T](candy: T=>B @pure, sweet: T=>B @pure, Reeses: T): Unit = {
   Deduce(
