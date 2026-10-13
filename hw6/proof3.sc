@@ -24,7 +24,27 @@ import org.sireum.justification.natded.prop._
     )
     Proof(
       //COMPLETE PROOF HERE
+      1 (∀((x: T) => (candy(x) __>: sweet(x)))) by Premise,
+      2 (∀((x: T) => (sweet(x) __>: hasSugar(x)))) by Premise,
+      3 Let((a :T) => SubProof(
+        4 SubProof(
+          5 Assume(!hasSugar(a)),
 
+          6 SubProof(
+            7 Assume(candy(a)),
+
+            8 (candy(a) __>: sweet(a)) by AllE[T](1),
+            9 (sweet(a) __>: hasSugar(a)) by AllE[T](2),
+
+            10 (sweet(a)) by ImplyE(8, 7),
+            11(hasSugar(a)) by ImplyE(9, 10),
+            12 (F) by NegE(11, 5),
+          ),
+          13 (!candy(a)) by NegI(6),
+        ),
+        14 (!hasSugar(a) __>: !candy(a)) by ImplyI(4),
+      )),
+      15 (∀((x: T) => (!hasSugar(x) __>: !candy(x)))) by AllI[T](3)
 
     )
   )

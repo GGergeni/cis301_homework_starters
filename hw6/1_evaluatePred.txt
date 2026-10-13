@@ -6,7 +6,8 @@ Explain your answer.
 
 1) Domain: ℤ
     Statement: ∀ m ∃ n (m < 2n)
-
+true
+we can choose a int for n that will be always greater than m becasue 2n
 
 
 
@@ -17,7 +18,8 @@ Explain your answer.
 
 2) Domain: ℤ
     Statement: ∃ n ∃ m (n^2 + m^2 = 10)
-
+true
+if we pick 1 and 3 then that would make 1 + 9 which would be 10
 
 
 
@@ -28,7 +30,8 @@ Explain your answer.
 
 3) Domain: ℤ
     Statement: ∃ n ∃ m (n^2 + m^2 = 7)
-
+flase 
+there are no ints that when squared and combined that would make 7
 
 
 
@@ -38,7 +41,8 @@ Explain your answer.
 
 4) Domain: ℝ (the set of real numbers)
     Statement: ∀ x ∃ y (x^2 = y)
-
+True 
+if we choose -3 and 9 then we can get a true statement
 
 
 
@@ -49,4 +53,5 @@ Explain your answer.
 
 5) Domain: ℝ (the set of real numbers)
     Statement: ∀ x ∃ y (x = y^2)
-
+false 
+this is false becasue the square of a real number is always nonnegative

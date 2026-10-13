@@ -22,11 +22,11 @@ In each of the following problems:
 
 Expressed in English:
 
-
+Every programmer has a dog
 
 
 Predicate logic negation:
-
+∃x (P(x) ⋀ ¬D(x))
 
 
 
@@ -35,12 +35,12 @@ Predicate logic negation:
 2) ∃ y (R(y) ⋀ ¬P(y))
 
 Expressed in English:
-
+some people play rugby but arent programmers
 
 
 
 Predicate logic negation:
-
+∀y (R(y) → P(y))
 
 
 
@@ -49,12 +49,12 @@ Predicate logic negation:
 3) ∃ x ∃ y (D(x) ⋀ M(x, y))
 
 Expressed in English:
-
+there is a person who has a dog and is a manager of someone
 
 
 
 Predicate logic negation:
-
+∀x ∀y (D(x) → ¬M(x,y))
 
 
 
@@ -63,8 +63,10 @@ Predicate logic negation:
 4) ∀ x ∃ y (P(x) → M(x, y) ⋀ R(y))
 
 Expressed in English:
-
+for every person this is a person that is a programmer, then the first person is a manager of the second person
+and the second person play rugby
 
 
 
 Predicate logic negation:
+∃x ∀y (P(x) ⋀ (M(x, y) → ¬R(y)))

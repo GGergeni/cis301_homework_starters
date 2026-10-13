@@ -23,8 +23,24 @@ import org.sireum.justification.natded.prop._
     )
     Proof(
       //COMPLETE PROOF HERE
+      1(∀((n: T) => (child(n) | adult(n)))) by Premise,
+      2 (∀((n: T) => !adult(n))) by Premise,
+      3 Let((a: T) => SubProof(
+        4 (child(a) | adult(a)) by AllE[T](1),
+        5(!adult(a)) by AllE[T](2),
 
+        6 SubProof(
+          7 Assume(child(a))
+        ),
 
+        8 SubProof(
+          9 Assume(adult(a)),
+          10 (F) by NegE(9, 5),
+          11(child(a)) by BottomE(10),
+        ),
+        12 (child(a)) by OrE(4, 6, 8)
+      )),
+      13 (∀((n: T) => child(n))) by AllI[T](3)
     )
   )
 }
