@@ -5,3 +5,22 @@ That is, that:
     2 + 4 + ... + 2n = n(n+1)
 
 (Note that we are considering "2" to be the first even natural number.)
+
+claim: for every natural number n >= 1
+
+2 + 4 + ... + 2n = n(n+1)
+
+base case (n = 1)
+the left side is just 2 the right side is 1(1+1) = 2
+claim therefore holds for n = 1
+
+Inductive Hypothesis
+assume the claim holds
+2 + 4 + ... + 2k=k(k+1)
+
+Inductive step
+2 + 4 + ... + 2k=k(k+1) = (k+1)(k+2)
+                = k(k+1)+2(k+1)
+                =(k+1)(k+2)
+
+claim is true for n = 1 and whenever it is true for k, it is true for k + 1

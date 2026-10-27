@@ -22,7 +22,20 @@ import org.sireum.justification.natded.prop._
       )
       Proof(
         //COMPLETE PROOF HERE
-
+        1 (∀((x: T) => (student(x) __>: csharp(x)))) by Premise,
+        2 ( ∃((x: T) => !csharp(x)) ) by Premise,
+        3 Let((c: T) => SubProof(
+          4 Assume (!csharp(c) ),
+          5 ( student(c) __>: csharp(c)) by AllE[T](1),
+          6 SubProof(
+            7 Assume(student(c)),
+            8 (csharp(c)) by ImplyE(5,7),
+            9 (F) by NegE(8,4)
+          ),
+          10 (!student(c)) by NegI(6),
+          11(∃((x: T) => !student(x))) by ExistsI[T](10),
+        )),
+        12 (∃((x: T) => !student(x))) by ExistsE[T](2,3)
       )
   )
 }
