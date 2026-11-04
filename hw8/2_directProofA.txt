@@ -6,3 +6,10 @@ Use a direct proof to prove the following proposition:
 
 The product of two odd integers is odd.
 
+a = 2k + 1
+b = 2j + 1
+
+ab = (2k + 1)(2j + 1)
+ab = 4kj + 2k + 2j + 1
+ab = 2(2kj + k + j) + 1
+Therefore the product of two odd ints is odd

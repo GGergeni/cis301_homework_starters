@@ -5,3 +5,16 @@
 Use a direct proof to prove the following proposition:
 
 If x and y are even integers and z is an odd integer, then xyz is even.
+
+
+x = 2a
+y = 2b
+z = 2c + 1
+
+xyz = (2a)(2b)(2c + 1)
+
+xyz = 4ab(2c+1)
+
+xyz = 2[2ab(2c+1)]
+
+therefore, xyz is even

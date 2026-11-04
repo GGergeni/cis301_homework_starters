@@ -4,3 +4,19 @@
 Prove that {x : x = 4k + 5, k ∈ Z} = {x : x = 4k + 1, k ∈ Z}
 
 
+let 
+A = {x : x = 4k + 5, k ∈ Z}
+B = {x : x = 4k + 1, k ∈ Z}
+
+let x ∈ A
+
+x = 4k + 5
+x = 4k + 4 + 1
+x = 4(k+1) + 1
+
+x = 4k + 1
+
+x = 4k + 4 + 1 -4
+x = 4(k - 1) + 5
+
+since AB and BA are equal A = B

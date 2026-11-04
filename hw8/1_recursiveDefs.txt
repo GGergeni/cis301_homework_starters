@@ -6,7 +6,9 @@
 
 (Hint: first write out what pattern it produces.)
 
-
+-2, 2, 6, 10, 14
+f(0) = 2
+f(n) = f(n-1) +4, n >= 1
 
 
 
@@ -17,7 +19,10 @@ For example, 6, 26, and 21 will all be in the set.
 
 (Hint: 0 is a multiple of 5.)
 
-
+1,6,11,16,21,26,31
+1 E S 
+if n E S
+then n + 5 E S
 
 
 
@@ -25,8 +30,9 @@ For example, 6, 26, and 21 will all be in the set.
 ///
 
 3) Give a recursive definition of the function Sum(n), where Sum(n) is the sum of the first n positive integers:
-
-
+0,1,3,6,10,15
+sum(0) = 0
+sum(n) = Sum(n-1) + n, n >=1
 
 
 
@@ -35,3 +41,6 @@ For example, 6, 26, and 21 will all be in the set.
 4) Give a recursive definition of the function Product(m, n), where Product(m, n) is the product of
 the integer m and the nonnegative integer n:
 
+0,3,6,9,12
+Product(m,0) = 0
+Product(m,n) = Product(m,n-1) + m, n >=1
