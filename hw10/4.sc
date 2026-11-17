@@ -31,12 +31,39 @@ def sumUp(n: Z): Z = {
   if (n == 1)  {
     answer = 1
 
+    Deduce(
+      1 ( n == 1) by Premise,
+      2 ( answer == 1 ) by Premise,
+      3 ( answer == n*(n+1)/2) by Algebra*(1,2)
+    )
+
   } else {
+
+    Deduce(
+      1 ( n >= 1) by Premise,
+      2 ( !(n==1) ) by Premise,
+      3 (n - 1 >= 1) by Algebra*(1,2),
+      4 ( 2 != 0) by Premise
+    )
 
     answer = sumUp(n-1)
 
+    Deduce(
+      1 (answer == (n-1)*((n-1)+1)/2) by Premise
+    )
+
     answer = answer + n
+
+    Deduce(
+      1 (answer == Old(answer) + n) by Premise,
+      2 ( Old(answer) == (n-1)*((n-1)+1)/2) by Premise,
+      3 (answer == n*(n+1)/2) by Algebra*(1,2)
+    )
   }
+
+  Deduce(
+    1 (answer == n*(n+1)/2) by Premise
+  )
 
   return answer
 }
@@ -49,8 +76,19 @@ Deduce(
   1  ( 2 != 0 ) by Algebra T //needed for precondition
 )
 
+Deduce(
+  1 ( num == 4 ) by Premise,
+  2 ( num >= 1) by Algebra*(1)
+)
+
 val sumTo4: Z = sumUp(num)
 println("The sum from 1 up to 4 is ", sumTo4)
+
+Deduce( 
+  1 (sumTo4 == num*(num+1)/2) by Premise,
+  2 (num == 4) by Premise,
+  3 (sumTo4 == 10) by Algebra*(1,2)
+)
 
 assert(sumTo4 == 10)
 
@@ -58,7 +96,19 @@ assert(sumTo4 == 10)
 
 num = 6
 
+Deduce(
+  1 (2!=0) by Algebra T,
+  2 (num == 6) by Premise,
+  3 ( num >= 1) by Algebra*(2)
+)
+
 val sumTo6: Z = sumUp(num)
 println("The sum from 1 up to 6 is ", sumTo6)
+
+Deduce(
+  1 (sumTo6 == num*(num+1)/2) by Premise,
+  2 (num == 6) by Premise,
+  3 (sumTo6== 21) by Algebra*(1,2)
+)
 
 assert(sumTo6 == 21)

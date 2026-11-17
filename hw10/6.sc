@@ -20,6 +20,12 @@ def sumUp(n: Z): Z = {
   var sum: Z = 0
   var i: Z = 0
 
+  Deduce(
+    1 (sum == 0) by Premise,
+    2 ( i == 0) by Premise,
+    3 (sum == i * (i+1)/2) by Algebra*(1,2)
+  )
+
   //the invariant holds before the loop begins
   //(you need to prove this)
   assert(sum == i * (i+1)/2)
@@ -32,12 +38,33 @@ def sumUp(n: Z): Z = {
 
     i = i + 1
 
+    Deduce(
+      1 (i == Old(i) + 1) by Premise,
+      2 (Old(i) == i - 1) by Algebra*(1),
+      3 ( sum == Old(i) * (Old(i)+1)/2) by Premise,
+      4 (sum == (i-1) * ((i-1)+1)/2) by Algebra*(2,3)
+    )
+
     sum = sum + i
+
+    Deduce(
+      1( Old(sum) == (i-1) * ((i-1)+1)/2) by Premise,
+      2 ( sum == Old(sum) + i) by Premise,
+      3 ( sum == (i-1) * ((i-1)+1)/2 +i) by Algebra*(1,2),
+      4 (sum == i *(i+1)/2) by Algebra*(3)
+    )
 
     //the invariant holds at the end of the iteration
     //(you need to prove this)
     assert(sum == i * (i+1)/2)
   }
+
+  Deduce(
+    1 ( !(i !=n)) by Premise,
+    2 (i==n) by Algebra*(1),
+    3 (sum == i *(i+1)/2) by Premise,
+    4 (sum == n *(n+1)/2) by Algebra*(2,3)
+  )
 
   return sum
 }
@@ -46,7 +73,22 @@ def sumUp(n: Z): Z = {
 
 var num: Z = 6
 
+Deduce(
+  1 (2 != 0) by Algebra T
+)
+
+Deduce(
+  1 ( num == 6) by Premise,
+  2 (num >= 1) by Algebra*(1)
+)
+
 val sumTo6: Z = sumUp(num)
 println("The sum from 1 up to 6 is ", sumTo6)
+
+Deduce(
+  1 (sumTo6 == num*(num+1)/2) by Premise,
+  2 (num == 6) by Premise,
+  3 (sumTo6 == 21) by Algebra*(1,2)
+)
 
 assert(sumTo6 == 21)

@@ -15,14 +15,44 @@ import org.sireum.justification.natded.prop._
 
 def findMin(x: Z, y: Z): Z = {
   //ADD FUNCTION CONTRACT
+  Contract(
+    Ensures(
+      Res[Z] <= x,
+      Res[Z] <= y,
+      Res[Z] == x | Res[Z] == y
+    )
+  )
 
   var min: Z = 0
 
   if (x <= y) {
     min = x
+
+    Deduce(
+      1 ( x <= y) by Premise,
+      2 ( min == x) by Premise,
+      3 (min <= x ) by Algebra*(2),
+      4 ( min <= y) by Algebra*(1,2),
+      5 (min == x | min == y) by OrI1(2)
+    )
   } else {
     min = y
+
+    Deduce(
+      1 ( !(x <= y)) by Premise,
+      2 (min == y) by Premise,
+      3 ( x > y) by Algebra*(1),
+      4 ( min <= x) by Algebra*(2,3),
+      5 ( min <= y) by Algebra*(2),
+      6 (min == x | min == y ) by OrI2(2)
+    )
   }
+
+  Deduce(
+    1 ( min <= x) by Premise,
+    2 ( min <= y) by Premise,
+    3 ( min == x | min == y) by Premise
+  )
 
   return min
 }
@@ -34,5 +64,23 @@ val num2: Z = 4
 
 
 val small: Z = findMin(num1, num2)
+
+Deduce(
+  1 ( small <= num1) by Premise,
+  2 ( small <= num2) by Premise,
+  3 ( small == num1 | small == num2) by Premise,
+  4 (num1 == 6) by Premise,
+  5 (num2 == 4 ) by Premise,
+  6 SubProof(
+    7 Assume(small == num1),
+     8 (small == 4) by Algebra*(2,4,5,7)
+  ),
+  9 SubProof(
+    10 Assume(small == num2),
+    11 (small == 4) by Algebra*(5,10)
+  
+  ),
+  12 (small == 4) by OrE(3,6,9)
+)
 
 assert(small == 4)

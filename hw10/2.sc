@@ -15,12 +15,29 @@ import org.sireum.justification.natded.prop._
 
 def addFive(x: Z): Z = {
   //WRITE FUNCTION CONTRACT
+  Contract(
+    Ensures(
+      Res[Z] == 5 * x 
+    )
+  )
 
   var total: Z = x
 
   total = total + x*11
 
+  Deduce(
+    1 ( total == Old (total) + x*11) by Premise,
+    2 (Old(total) == x) by Premise,
+    3 (total == 12 * x) by Algebra*(1,2)
+  )
+
   total = total - 7*x
+
+  Deduce(
+    1 ( total == Old(total) - 7*x) by Premise,
+    2 ( Old(total) == 12 * x) by Premise,
+    3 (total == 5 * x) by Algebra*(1,2)
+  )
 
   return total
 }
@@ -30,5 +47,11 @@ def addFive(x: Z): Z = {
 val a: Z = 8
 
 var addTest: Z = addFive(12-a)
+
+Deduce(
+  1 ( addTest == 5 * (12 - a)) by Premise,
+  2 ( a == 8) by Premise,
+  3 ( addTest == 20 ) by Algebra*(1,2)
+)
 
 assert(addTest == 20)
